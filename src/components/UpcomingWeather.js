@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, SafeAreaView, StyleSheet, Text, FlatList, StatusBar } from 'react-native';
+import { View, SafeAreaView, StyleSheet, Text, FlatList, StatusBar, ImageBackground } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
 const DATA = [
@@ -68,6 +68,7 @@ const UpcomingWeather = () => {
 
     <SafeAreaView style={styles.container} >
       <Text >Upcoming Weather</Text>
+      <ImageBackground source={require('../../assets/images/beautiful-nature-g008bf5021_1920.jpg')} style= {styles.image}>
       <FlatList 
         data={DATA}
         renderItem={renderItem}
@@ -76,6 +77,7 @@ const UpcomingWeather = () => {
         // <View style={{backgroundColor:"#5f9ea0", height: 10}} />}
         ListEmptyComponent={Empty}
       />
+      </ImageBackground>
     </SafeAreaView>
   )
 
@@ -104,6 +106,9 @@ const styles = StyleSheet.create({
    date:{
     color: 'white',
     fontSize: 8,
+   },
+   image:{
+    flex: 1
    }
 
 })
