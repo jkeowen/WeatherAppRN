@@ -22,8 +22,9 @@ const City = () => {
          rowLayout
         } = styles
   return (
+    <ImageBackground source={require('../../assets/images/cityBackground.jpg')} style={imageLayout}>
     <SafeAreaView style={container}>
-      <ImageBackground source={require('../../assets/images/cityBackground.jpg')} style={imageLayout}>
+     
         <Text style={[cityName, cityText]} >Baton Rouge</Text>
         <Text style={[stateName, cityText]} >Louisiana</Text>
         <Text style={[stateName, cityText]}>United States</Text>
@@ -48,9 +49,8 @@ const City = () => {
             bodyTextStyles={riseSetText}
             />
         </View>
-       
-      </ImageBackground>
     </SafeAreaView>
+    </ImageBackground>
   )
 }
 
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     marginTop: 30
   },
   riseSetText:{
-    fontSize: 20,
+    fontSize: 10,
     marginLeft: 7.5,
     marginRight: 7.5,
     color: 'white',
